@@ -1,0 +1,28 @@
+import UIKit
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Set the background color of the view
+        view.backgroundColor = .white
+        
+        // Create a label
+        let label = UILabel()
+        label.text = "Hello, Swift!"
+        label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Add the label to the view
+        view.addSubview(label)
+        
+        // Add constraints to center the label in the view
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+}
